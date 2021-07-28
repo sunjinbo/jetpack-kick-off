@@ -8,7 +8,7 @@ import android.util.Log
 import androidx.core.app.ActivityCompat
 
 class MainActivity : AppCompatActivity() {
-    lateinit var listener: MyLocationListener
+    private lateinit var listener: MyLocationListener
 
     companion object {
         const val REQUEST_PERMISSION_LOCATION: Int = 1
@@ -17,6 +17,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        var transaction = supportFragmentManager.beginTransaction()
+        var blankFragment = BlankFragment.newInstance("", "")
+        transaction.add(R.id.container, blankFragment)
+        transaction.commit();
+
         listener = MyLocationListener(this, object : MyLocationListener.OnLocationChangedListener{
             override fun onChanged(latitude: Double, longitude: Double) {
                 Log.d("jetpack", "latitude = $latitude, longitude = $longitude")
