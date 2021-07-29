@@ -6,9 +6,16 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.core.app.ActivityCompat
+import androidx.navigation.NavController
+import androidx.navigation.Navigation
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.NavigationUI
 
 class MainActivity : AppCompatActivity() {
     private lateinit var listener: MyLocationListener
+
+    private lateinit var appBarConfig: AppBarConfiguration
+    private lateinit var navController: NavController
 
     companion object {
         const val REQUEST_PERMISSION_LOCATION: Int = 1
@@ -18,10 +25,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-//        var transaction = supportFragmentManager.beginTransaction()
-//        var blankFragment = BlankFragment.newInstance("", "")
-//        transaction.add(R.id.container, blankFragment)
-//        transaction.commit()
+        navController = Navigation.findNavController(this, R.id.nav_host_fragment)
+        appBarConfig = AppBarConfiguration.Builder(navController.graph).build()
+        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfig)
 
         listener = MyLocationListener(this, object : MyLocationListener.OnLocationChangedListener{
             override fun onChanged(latitude: Double, longitude: Double) {

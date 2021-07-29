@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BlankFragment">
+    tools:context=".LiefCycleFragment">
 
     <Button
         android:id="@+id/start_timer"
@@ -18,5 +18,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="stop timer" />
+
+    <TextView
+        android:id="@+id/timer"
+        android:text="0"
+        android:textSize="98sp"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>

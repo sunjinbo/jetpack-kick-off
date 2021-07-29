@@ -3,11 +3,41 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/blankFragment">
+    app:startDestination="@id/mainFragment">
 
     <fragment
-        android:id="@+id/blankFragment"
-        android:name="com.sample.jetpack.BlankFragment"
-        android:label="fragment_blank"
-        tools:layout="@layout/fragment_blank" />
+        android:id="@+id/mainFragment"
+        android:name="com.sample.jetpack.MainFragment"
+        android:label="Jetpack"
+        tools:layout="@layout/fragment_main" >
+
+        <action
+            android:id="@+id/action_mainFragment_to_lifecycleFragment"
+            app:destination="@id/lifecycleFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_mainFragment_to_navigationFragment"
+            app:destination="@id/navigationFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/lifecycleFragment"
+        android:name="com.sample.jetpack.LiefCycleFragment"
+        android:label="LifeCycle"
+        tools:layout="@layout/fragment_lifecycle" />
+
+    <fragment
+        android:id="@+id/navigationFragment"
+        android:name="com.sample.jetpack.NavigationFragment"
+        android:label="Navigation"
+        tools:layout="@layout/fragment_navigation" />
+
 </navigation>
