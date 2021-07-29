@@ -18,10 +18,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var transaction = supportFragmentManager.beginTransaction()
-        var blankFragment = BlankFragment.newInstance("", "")
-        transaction.add(R.id.container, blankFragment)
-        transaction.commit();
+//        var transaction = supportFragmentManager.beginTransaction()
+//        var blankFragment = BlankFragment.newInstance("", "")
+//        transaction.add(R.id.container, blankFragment)
+//        transaction.commit()
 
         listener = MyLocationListener(this, object : MyLocationListener.OnLocationChangedListener{
             override fun onChanged(latitude: Double, longitude: Double) {
@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
                     REQUEST_PERMISSION_LOCATION)
             }
         })
-        lifecycle.addObserver(listener!!)
+        lifecycle.addObserver(listener)
     }
 
     override fun onRequestPermissionsResult(
