@@ -27,7 +27,7 @@ class MyService : LifecycleService(), MyServiceListener.Callback {
     }
 
     inner class MyBinder : Binder() {
-        fun setCallback(cb: Callback) {
+        fun setCallback(cb: Callback?) {
             callback = cb
         }
     }

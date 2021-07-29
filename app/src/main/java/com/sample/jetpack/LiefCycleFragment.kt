@@ -16,6 +16,7 @@ import android.widget.TextView
 class LiefCycleFragment : Fragment(), ServiceConnection, MyService.Callback {
 
     private lateinit var tickTextView: TextView
+    private var binder:MyService.MyBinder? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,7 +30,7 @@ class LiefCycleFragment : Fragment(), ServiceConnection, MyService.Callback {
         }
 
         view.findViewById<Button>(R.id.stop_timer).setOnClickListener {
-            context?.unbindService(this)
+            binder?.let { context?.unbindService(this) }
         }
 
         tickTextView = view.findViewById<TextView>(R.id.timer)
@@ -38,12 +39,13 @@ class LiefCycleFragment : Fragment(), ServiceConnection, MyService.Callback {
     }
 
     override fun onServiceConnected(name: ComponentName?, service: IBinder?) {
-        var binder = service as MyService.MyBinder
-        binder.setCallback(this)
+        binder = service as MyService.MyBinder
+        binder?.setCallback(this)
     }
 
     override fun onServiceDisconnected(name: ComponentName?) {
-        // ignore
+        binder?.setCallback(null)
+        binder = null
     }
 
     override fun onTick(tick: Int) {
