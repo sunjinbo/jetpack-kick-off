@@ -38,6 +38,10 @@
         android:id="@+id/navigationFragment"
         android:name="com.sample.jetpack.NavigationFragment"
         android:label="Navigation"
-        tools:layout="@layout/fragment_navigation" />
+        tools:layout="@layout/fragment_navigation" >
+
+        <deepLink app:uri="www.baidu.com/{params}" />
+
+    </fragment>
 
 </navigation>

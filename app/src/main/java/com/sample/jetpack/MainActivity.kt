@@ -5,6 +5,7 @@ import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.MenuItem
 import androidx.core.app.ActivityCompat
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
@@ -62,5 +63,14 @@ class MainActivity : AppCompatActivity() {
                 listener.startGetLocation()
             }
         }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return NavigationUI.onNavDestinationSelected(item,
+            navController) || super.onOptionsItemSelected(item)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        return NavigationUI.navigateUp(navController, appBarConfig) || super.onSupportNavigateUp()
     }
 }
