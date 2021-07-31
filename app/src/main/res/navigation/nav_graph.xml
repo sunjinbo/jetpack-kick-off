@@ -61,13 +61,13 @@
     <fragment
         android:id="@+id/viewModelFragment"
         android:name="com.sample.jetpack.ViewModelFragment"
-        android:label="fragment_view_model"
+        android:label="ViewModel"
         tools:layout="@layout/fragment_view_model" />
 
     <fragment
         android:id="@+id/liveDataFragment"
         android:name="com.sample.jetpack.LiveDataFragment"
-        android:label="fragment_live_data"
+        android:label="LiveData"
         tools:layout="@layout/fragment_live_data" />
 
 </navigation>
