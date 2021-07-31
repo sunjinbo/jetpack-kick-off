@@ -6,7 +6,7 @@ import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
 import java.util.*
 
-class MyServiceListener(val callback: Callback) : TimerTask(), LifecycleObserver {
+class MyServiceListener(private val callback: Callback) : TimerTask(), LifecycleObserver {
     private var timer:Timer? = null
     private var running:Boolean = false
     private var tick:Int = 0

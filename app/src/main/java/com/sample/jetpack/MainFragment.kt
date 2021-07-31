@@ -24,6 +24,14 @@ class MainFragment : Fragment() {
             Navigation.findNavController(view).navigate(R.id.action_mainFragment_to_navigationFragment)
         }
 
+        view.findViewById<Button>(R.id.view_model).setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_mainFragment_to_viewModelFragment)
+        }
+
+        view.findViewById<Button>(R.id.live_data).setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_mainFragment_to_liveDataFragment)
+        }
+
         return view
     }
 }

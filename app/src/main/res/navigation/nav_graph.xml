@@ -25,6 +25,20 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_mainFragment_to_viewModelFragment"
+            app:destination="@id/viewModelFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_mainFragment_to_liveDataFragment"
+            app:destination="@id/liveDataFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
 
     </fragment>
 
@@ -43,5 +57,17 @@
         <deepLink app:uri="www.baidu.com/{params}" />
 
     </fragment>
+
+    <fragment
+        android:id="@+id/viewModelFragment"
+        android:name="com.sample.jetpack.ViewModelFragment"
+        android:label="fragment_view_model"
+        tools:layout="@layout/fragment_view_model" />
+
+    <fragment
+        android:id="@+id/liveDataFragment"
+        android:name="com.sample.jetpack.LiveDataFragment"
+        android:label="fragment_live_data"
+        tools:layout="@layout/fragment_live_data" />
 
 </navigation>
