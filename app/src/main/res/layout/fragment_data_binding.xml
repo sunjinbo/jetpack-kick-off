@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="time"
+            type="com.sample.jetpack.MyTime" />
+
+        <variable
+            name="EventHandler"
+            type="com.sample.jetpack.EventHandlerListener" />
+
+        <import type="com.sample.jetpack.TimeUtil" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".DataBindingFragment">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="36sp"
+            android:text="@{time.timeZone}"
+            tools:text="CST UTC +8" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="36sp"
+            android:text="@{TimeUtil.getTimeString(time.time)}"
+            tools:text="2021/8/1 12:45" />
+
+        <Button
+            android:onClick="@{EventHandler.onClicked}"
+            android:text="@string/refresh_time"
+            android:textAllCaps="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

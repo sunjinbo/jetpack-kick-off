@@ -9,29 +9,28 @@
 
     <Button
         android:id="@+id/life_cycle"
-        android:text="LifeCycle"
+        android:text="@string/life_cycle"
         android:textAllCaps="false"
-        android:onClick="onLifeCycleClick"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/navigation"
-        android:text="Navigation"
+        android:text="@string/navigation"
         android:textAllCaps="false"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/view_model"
-        android:text="ViewModel"
+        android:text="@string/view_model"
         android:textAllCaps="false"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/live_data"
-        android:text="LiveData"
+        android:text="@string/live_data"
         android:textAllCaps="false"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
@@ -39,7 +38,7 @@
     <Button
         android:visibility="gone"
         android:id="@+id/room"
-        android:text="Room"
+        android:text="@string/room"
         android:textAllCaps="false"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
@@ -47,15 +46,14 @@
     <Button
         android:visibility="gone"
         android:id="@+id/work_manager"
-        android:text="WorkManager"
+        android:text="@string/work_manager"
         android:textAllCaps="false"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
     <Button
-        android:visibility="gone"
         android:id="@+id/data_binding"
-        android:text="DataBinding"
+        android:text="@string/data_binding"
         android:textAllCaps="false"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
@@ -63,7 +61,7 @@
     <Button
         android:visibility="gone"
         android:id="@+id/paging"
-        android:text="Paging"
+        android:text="@string/paging"
         android:textAllCaps="false"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
@@ -71,7 +69,7 @@
     <Button
         android:visibility="gone"
         android:id="@+id/mvvm"
-        android:text="MVVM"
+        android:text="@string/mvvm"
         android:textAllCaps="false"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

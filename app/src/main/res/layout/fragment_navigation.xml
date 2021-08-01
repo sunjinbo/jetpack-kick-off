@@ -7,7 +7,7 @@
 
     <Button
         android:id="@+id/deep_link"
-        android:text="DeepLink"
+        android:text="@string/deep_link"
         android:textAllCaps="false"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

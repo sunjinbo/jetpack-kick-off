@@ -39,6 +39,13 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_mainFragment_to_dataBindingFragment"
+            app:destination="@id/dataBindingFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
 
     </fragment>
 
@@ -69,5 +76,11 @@
         android:name="com.sample.jetpack.LiveDataFragment"
         android:label="LiveData"
         tools:layout="@layout/fragment_live_data" />
+
+    <fragment
+        android:id="@+id/dataBindingFragment"
+        android:name="com.sample.jetpack.DataBindingFragment"
+        android:label="DataBinding"
+        tools:layout="@layout/fragment_data_binding" />
 
 </navigation>

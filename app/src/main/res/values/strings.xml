@@ -1,7 +1,16 @@
 <resources>
     <string name="app_name">jetpack</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_timer_fragment">Hello timer fragment</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="refresh_time">Refresh Time</string>
+    <string name="start_timer">start timer</string>
+    <string name="stop_timer">stop timer</string>
+    <string name="mvvm">MVVM</string>
+    <string name="navigation">Navigation</string>
+    <string name="view_model">ViewModel</string>
+    <string name="live_data">LiveData</string>
+    <string name="room">Room</string>
+    <string name="data_binding">DataBinding</string>
+    <string name="work_manager">WorkManager</string>
+    <string name="paging">Paging</string>
+    <string name="life_cycle">LifeCycle</string>
+    <string name="deep_link">DeepLink</string>
 </resources>

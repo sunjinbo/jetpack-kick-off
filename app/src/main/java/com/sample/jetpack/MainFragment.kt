@@ -32,6 +32,10 @@ class MainFragment : Fragment() {
             Navigation.findNavController(view).navigate(R.id.action_mainFragment_to_liveDataFragment)
         }
 
+        view.findViewById<Button>(R.id.data_binding).setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_mainFragment_to_dataBindingFragment)
+        }
+
         return view
     }
 }
