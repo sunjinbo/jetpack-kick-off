@@ -18,6 +18,7 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
+
         <action
             android:id="@+id/action_mainFragment_to_navigationFragment"
             app:destination="@id/navigationFragment"
@@ -25,6 +26,7 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
+
         <action
             android:id="@+id/action_mainFragment_to_viewModelFragment"
             app:destination="@id/viewModelFragment"
@@ -32,6 +34,7 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
+
         <action
             android:id="@+id/action_mainFragment_to_liveDataFragment"
             app:destination="@id/liveDataFragment"
@@ -39,9 +42,18 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
+
         <action
             android:id="@+id/action_mainFragment_to_dataBindingFragment"
             app:destination="@id/dataBindingFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_mainFragment_to_roomFragment"
+            app:destination="@id/roomFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
@@ -82,5 +94,11 @@
         android:name="com.sample.jetpack.DataBindingFragment"
         android:label="DataBinding"
         tools:layout="@layout/fragment_data_binding" />
+
+    <fragment
+        android:id="@+id/roomFragment"
+        android:name="com.sample.jetpack.RoomFragment"
+        android:label="Room"
+        tools:layout="@layout/fragment_room" />
 
 </navigation>

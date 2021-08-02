@@ -9,6 +9,8 @@
         android:id="@+id/deep_link"
         android:text="@string/deep_link"
         android:textAllCaps="false"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

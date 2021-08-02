@@ -13,4 +13,6 @@
     <string name="paging">Paging</string>
     <string name="life_cycle">LifeCycle</string>
     <string name="deep_link">DeepLink</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
