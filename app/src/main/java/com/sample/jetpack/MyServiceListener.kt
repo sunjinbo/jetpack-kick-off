@@ -12,7 +12,7 @@ class MyServiceListener(private val callback: Callback) : TimerTask(), Lifecycle
     private var tick:Int = 0
 
     interface Callback {
-        fun onTick(tick: Int)
+        fun onTick(tk: Int)
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)

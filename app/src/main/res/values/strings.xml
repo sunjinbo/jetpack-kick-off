@@ -13,6 +13,10 @@
     <string name="paging">Paging</string>
     <string name="life_cycle">LifeCycle</string>
     <string name="deep_link">DeepLink</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="insert_student">Insert a student</string>
+    <string name="update_student">Update the youngest student</string>
+    <string name="delete_student">Delete the oldest student</string>
+    <string name="query_student">Query how many student in Database</string>
+    <string name="check_student">Check student for more info</string>
+    <string name="refresh_student">Refresh Student</string>
 </resources>

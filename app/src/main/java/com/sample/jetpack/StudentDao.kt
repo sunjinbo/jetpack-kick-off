@@ -1,5 +1,6 @@
 package com.sample.jetpack
 
+import androidx.lifecycle.LiveData
 import androidx.room.*
 
 @Dao
@@ -18,4 +19,7 @@ interface StudentDao {
 
     @Query("SELECT * FROM student WHERE id = :id")
     fun getStudentById(id: Int) : Student
+
+    @Query("SELECT * FROM student ORDER BY age limit 1")
+    fun getOldestStudent() : LiveData<Student>
 }

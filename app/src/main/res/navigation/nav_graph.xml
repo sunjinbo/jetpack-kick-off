@@ -99,6 +99,22 @@
         android:id="@+id/roomFragment"
         android:name="com.sample.jetpack.RoomFragment"
         android:label="Room"
-        tools:layout="@layout/fragment_room" />
+        tools:layout="@layout/fragment_room" >
+
+        <action
+            android:id="@+id/action_roomFragment_to_studentFragment"
+            app:destination="@id/studentFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/studentFragment"
+        android:name="com.sample.jetpack.StudentFragment"
+        android:label="Student"
+        tools:layout="@layout/fragment_student" />
 
 </navigation>

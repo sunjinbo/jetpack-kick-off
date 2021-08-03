@@ -1,13 +1,17 @@
 package com.sample.jetpack
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.Toast
+import androidx.navigation.Navigation
 import java.lang.StringBuilder
+import java.util.*
+import kotlin.collections.ArrayList
 import kotlin.random.Random
 
 class RoomFragment : Fragment() {
@@ -28,7 +32,7 @@ class RoomFragment : Fragment() {
                 var rand = Random(System.currentTimeMillis())
                 var student = Student(getRandomName(), rand.nextInt(1, 20))
                 database?.studentDao()?.insertStudent(student)
-                showToast(it, "We insert ${student?.name} to database.")
+                showToast(it, "We insert ${student.name} to database.")
             }.start()
         }
 
@@ -85,6 +89,10 @@ class RoomFragment : Fragment() {
             }.start()
         }
 
+        view.findViewById<Button>(R.id.check_student).setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_roomFragment_to_studentFragment)
+        }
+
         return view
     }
 
@@ -92,7 +100,7 @@ class RoomFragment : Fragment() {
         var sb = StringBuilder()
         for (i in 0..5) {
             var rand = Random(System.currentTimeMillis())
-            sb.append('a' + rand.nextInt(1, 25))
+            sb.append('a' + rand.nextInt(i, 25))
         }
         return sb.toString()
     }

@@ -18,8 +18,8 @@ class MyService : LifecycleService(), MyServiceListener.Callback {
         return MyBinder()
     }
 
-    override fun onTick(tick: Int) {
-        callback?.onTick(tick)
+    override fun onTick(tk: Int) {
+        callback?.onTick(tk)
     }
 
     interface Callback {

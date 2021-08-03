@@ -9,7 +9,7 @@
 
     <Button
         android:id="@+id/insert_student"
-        android:text="Insert a student"
+        android:text="@string/insert_student"
         android:textAllCaps="false"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
@@ -18,7 +18,7 @@
 
     <Button
         android:id="@+id/update_student"
-        android:text="Update the youngest student"
+        android:text="@string/update_student"
         android:textAllCaps="false"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
@@ -27,7 +27,7 @@
 
     <Button
         android:id="@+id/delete_student"
-        android:text="Delete the oldest student"
+        android:text="@string/delete_student"
         android:textAllCaps="false"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
@@ -36,7 +36,16 @@
 
     <Button
         android:id="@+id/query_student"
-        android:text="Query how many student in Database"
+        android:text="@string/query_student"
+        android:textAllCaps="false"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/check_student"
+        android:text="@string/check_student"
         android:textAllCaps="false"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"

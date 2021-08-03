@@ -25,7 +25,7 @@ class LiveDataViewModel : ViewModel(), MyServiceListener.Callback {
         timer?.stopTimer()
     }
 
-    override fun onTick(t: Int) {
-        tick?.postValue(t)
+    override fun onTick(tk: Int) {
+        tick?.postValue(tk)
     }
 }
