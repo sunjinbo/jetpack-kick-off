@@ -53,7 +53,6 @@
         android:layout_height="wrap_content" />
 
     <Button
-        android:visibility="gone"
         android:id="@+id/work_manager"
         android:text="@string/work_manager"
         android:textAllCaps="false"

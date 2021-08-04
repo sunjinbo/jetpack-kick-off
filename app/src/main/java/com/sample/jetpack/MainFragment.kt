@@ -40,6 +40,10 @@ class MainFragment : Fragment() {
             Navigation.findNavController(view).navigate(R.id.action_mainFragment_to_roomFragment)
         }
 
+        view.findViewById<Button>(R.id.work_manager).setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_mainFragment_to_workManagerFragment)
+        }
+
         return view
     }
 }
