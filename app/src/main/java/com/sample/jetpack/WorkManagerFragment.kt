@@ -26,8 +26,8 @@ class WorkManagerFragment : Fragment() {
                 .build()
             var inputData = Data.Builder()
                 .putInt("start_timer", 1)
-                .putInt("end_timer", 50)
-                .putLong("interval", 100L)
+                .putInt("end_timer", 66)
+                .putLong("interval", 300L)
                 .build()
             var request = OneTimeWorkRequest.Builder(TimerWorker::class.java)
                 .setConstraints(constraints)
@@ -39,7 +39,10 @@ class WorkManagerFragment : Fragment() {
 
             WorkManager.getInstance(requireContext()).getWorkInfoByIdLiveData(request.id)
                 .observe(viewLifecycleOwner, {
-                    Log.d("jetpack", it.toString())
+                    it?.let {
+                        var progressData = it.progress
+                        progressData.getString("progress")?.let { p -> Log.d("jetpack", p) }
+                    }
             })
 
             WorkManager.getInstance(requireContext()).enqueue(request)
