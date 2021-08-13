@@ -9,7 +9,7 @@ class StudentViewModel(application: Application) : AndroidViewModel(application)
     private var liveDataStudent: LiveData<Student>? = null
 
     init {
-        database = application?.let { MyDatabase.getInstance(it) }
+        database = application.let { MyDatabase.getInstance(it) }
         liveDataStudent = database?.studentDao()?.getOldestStudent()
     }
 

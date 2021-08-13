@@ -14,7 +14,7 @@ class MainFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        var view = inflater.inflate(R.layout.fragment_main, container, false)
+        val view = inflater.inflate(R.layout.fragment_main, container, false)
 
         view.findViewById<Button>(R.id.life_cycle).setOnClickListener {
             Navigation.findNavController(view).navigate(R.id.action_mainFragment_to_lifecycleFragment)
@@ -42,6 +42,22 @@ class MainFragment : Fragment() {
 
         view.findViewById<Button>(R.id.work_manager).setOnClickListener {
             Navigation.findNavController(view).navigate(R.id.action_mainFragment_to_workManagerFragment)
+        }
+
+        view.findViewById<Button>(R.id.paging).setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_mainFragment_to_pagingFragment)
+        }
+
+        view.findViewById<Button>(R.id.mvvm).setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_mainFragment_to_mvvmFragment)
+        }
+
+        view.findViewById<Button>(R.id.hilt).setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_mainFragment_to_hiltFragment)
+        }
+
+        view.findViewById<Button>(R.id.camerax).setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_mainFragment_to_cameraXFragment)
         }
 
         return view

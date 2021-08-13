@@ -58,9 +58,42 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
+
         <action
             android:id="@+id/action_mainFragment_to_workManagerFragment"
             app:destination="@id/workManagerFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_mainFragment_to_pagingFragment"
+            app:destination="@id/pagingFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_mainFragment_to_mvvmFragment"
+            app:destination="@id/mvvmFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_mainFragment_to_hiltFragment"
+            app:destination="@id/hiltFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+        <action
+            android:id="@+id/action_mainFragment_to_cameraXFragment"
+            app:destination="@id/cameraXFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
@@ -126,7 +159,27 @@
     <fragment
         android:id="@+id/workManagerFragment"
         android:name="com.sample.jetpack.WorkManagerFragment"
-        android:label="fragment_work_manager"
+        android:label="WorkManager"
         tools:layout="@layout/fragment_work_manager" />
+    <fragment
+        android:id="@+id/pagingFragment"
+        android:name="com.sample.jetpack.PagingFragment"
+        android:label="Paging"
+        tools:layout="@layout/fragment_paging" />
+    <fragment
+        android:id="@+id/mvvmFragment"
+        android:name="com.sample.jetpack.MvvmFragment"
+        android:label="MVVM"
+        tools:layout="@layout/fragment_mvvm" />
+    <fragment
+        android:id="@+id/hiltFragment"
+        android:name="com.sample.jetpack.HiltFragment"
+        android:label="Hilt"
+        tools:layout="@layout/fragment_hilt" />
+    <fragment
+        android:id="@+id/cameraXFragment"
+        android:name="com.sample.jetpack.CameraXFragment"
+        android:label="CameraX"
+        tools:layout="@layout/fragment_camera_x" />
 
 </navigation>

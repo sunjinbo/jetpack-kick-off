@@ -21,10 +21,10 @@ class ViewModelFragment : Fragment() {
 
         viewModel = ViewModelProvider(this).get(TimerViewModel::class.java)
         viewModel.startTimer(object : MyServiceListener.Callback{
-            override fun onTick(tick: Int) {
+            override fun onTick(tk: Int) {
                 view.post {
                     var tickTextView = view.findViewById<TextView>(R.id.timer)
-                    tickTextView.text = tick.toString()
+                    tickTextView.text = tk.toString()
                 }
             }
         })
