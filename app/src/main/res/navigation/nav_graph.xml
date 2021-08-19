@@ -107,6 +107,14 @@
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
 
+        <action
+            android:id="@+id/action_mainFragment_to_composeFragment"
+            app:destination="@id/composeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
     </fragment>
 
     <fragment
@@ -193,6 +201,26 @@
         android:id="@+id/KTXFragment"
         android:name="com.sample.jetpack.KTXFragment"
         android:label="KTX"
-        tools:layout="@layout/fragment_ktx" />
+        tools:layout="@layout/fragment_ktx" >
+        <action
+            android:id="@+id/action_KTXFragment_to_coroutinesFragment"
+            app:destination="@id/coroutinesFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/coroutinesFragment"
+        android:name="com.sample.jetpack.CoroutinesFragment"
+        android:label="Coroutines"
+        tools:layout="@layout/fragment_coroutines" />
+
+    <fragment
+        android:id="@+id/composeFragment"
+        android:name="com.sample.jetpack.ComposeFragment"
+        android:label="Jetpack Compose"
+        tools:layout="@layout/fragment_compose" />
 
 </navigation>

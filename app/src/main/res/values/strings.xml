@@ -24,4 +24,6 @@
     <string name="camerax">CameraX</string>
     <string name="hilt">Hilt</string>
     <string name="ktx">KTX</string>
+    <string name="coroutines">Coroutines</string>
+    <string name="jetpack_compose">Jetpack Compose</string>
 </resources>

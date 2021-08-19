@@ -60,6 +60,14 @@ class MainFragment : Fragment() {
             Navigation.findNavController(view).navigate(R.id.action_mainFragment_to_cameraXFragment)
         }
 
+        view.findViewById<Button>(R.id.ktx).setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_mainFragment_to_KTXFragment)
+        }
+
+        view.findViewById<Button>(R.id.compose).setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_mainFragment_to_composeFragment)
+        }
+
         return view
     }
 }
