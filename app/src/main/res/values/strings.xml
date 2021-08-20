@@ -19,6 +19,7 @@
     <string name="query_student">Query how many student in Database</string>
     <string name="check_student">Check student for more info</string>
     <string name="refresh_student">Refresh Student</string>
+    <string name="refresh">Refresh</string>
     <string name="start_work">Start work</string>
     <string name="cancel_work">Cancel work</string>
     <string name="camerax">CameraX</string>

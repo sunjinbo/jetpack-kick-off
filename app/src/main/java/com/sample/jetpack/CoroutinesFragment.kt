@@ -5,9 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
+import kotlinx.coroutines.*
 
 class CoroutinesFragment : Fragment() {
 
@@ -22,10 +20,6 @@ class CoroutinesFragment : Fragment() {
     }
 
     private fun test() {
-        GlobalScope.launch {
-            delay(1000L)
-            print("world")
-        }
-        print("hello,")
+        Dispatchers
     }
 }
