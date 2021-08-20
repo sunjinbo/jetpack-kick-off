@@ -1,5 +1,6 @@
 package com.sample.jetpack
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -65,7 +66,7 @@ class MainFragment : Fragment() {
         }
 
         view.findViewById<Button>(R.id.compose).setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_mainFragment_to_composeFragment)
+            requireActivity().startActivity(Intent(requireContext(), ComposeActivity::class.java))
         }
 
         return view
